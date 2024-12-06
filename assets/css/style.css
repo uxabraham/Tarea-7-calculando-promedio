@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle at center, #000000, #1a1a1a, #333333);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Pantalla de carga */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.logo-container img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0px 0px 10px #f7df1e);
+}
+
+.loading-text {
+    font-size: 1.5rem;
+    color: #f7df1e;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 8px #f7df1e;
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    border-top: 8px solid #f0db4f;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Contenido oculto inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Main Content */
+.content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    padding: 20px;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f0db4f;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #dddddd;
+    margin: 20px 0;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #f7df1e;
+    text-shadow: 0px 0px 10px #f7df1e;
+}
+
+/* Info Box */
+.info-box {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.info-box p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.detail {
+    color: #f0db4f;
+    font-weight: bold;
+}
+
+/* Watermark */
+.watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    opacity: 0.1;
+}
+
+.watermark img {
+    width: 400px;
+    height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    transform: perspective(500px) rotateX(35deg) rotateY(-45deg);
+}
